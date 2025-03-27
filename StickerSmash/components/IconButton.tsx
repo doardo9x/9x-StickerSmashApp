@@ -5,7 +5,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 type Props = {
     icon: keyof typeof MaterialIcons.glyphMap;
     onPress: () => void;
-    label: 'string'
+    label: string
 }
 
 export default function CircleButton( {icon, label, onPress }: Props) {
