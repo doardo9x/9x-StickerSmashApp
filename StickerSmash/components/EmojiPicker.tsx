@@ -10,17 +10,17 @@ type Props = PropsWithChildren<{
 export default function EmojiPicker({isVisible, children, onClose}: Props) {
   return (
     <View>
-      <Modal animationType='slide' transparent={true} visible={isVisible}>
-        <View style={styles.modalContent}>
-            <View style={styles.titleContainer}>
-                <Text style={styles.title}>Escolha uma Figurinha</Text>
-                <Pressable onPress={onClose}>
-                    <MaterialIcons name='close' color='#fff' size={22} />
-                </Pressable>
+        <Modal animationType='slide' transparent={true} visible={isVisible}>
+            <View style={styles.modalContent}>
+                <View style={styles.titleContainer}>
+                    <Text style={styles.title}>Escolha uma figurinha</Text>
+                    <Pressable onPress={onClose}>
+                        <MaterialIcons name='close' color='#fff' size={22} />
+                    </Pressable>
+                </View>
+                { children }
             </View>
-            { children }
-        </View>
-      </Modal>
+        </Modal>
     </View>
   )
 }
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
     titleContainer: {
         height: '16%',
-        backgroundColor: '#25292e',
+        backgroundColor: '#464c55',
         borderTopRightRadius: 10,
         borderTopLeftRadius: 10,
         paddingHorizontal: 20,
@@ -48,5 +48,5 @@ const styles = StyleSheet.create({
     title: {
         color: '#fff',
         fontSize: 16,
-    },
+    }
 })

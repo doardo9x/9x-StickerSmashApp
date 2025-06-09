@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { View } from 'react-native'
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { type ImageSource } from 'expo-image';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
@@ -14,21 +14,20 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
 
-
   const doubleTap = Gesture.Tap()
     .numberOfTaps(2)
     .onStart(() => {
       if (scaleImage.value !== imageSize * 2) {
         scaleImage.value = scaleImage.value * 2;
       } else {
-        scaleImage.value = Math.round(scaleImage.value / 2)
+        scaleImage.value = Math.round(scaleImage.value / 2);
       }
     });
 
   const imageStyle = useAnimatedStyle(() => {
     return {
       width: withSpring(scaleImage.value),
-      height: withSpring(scaleImage.value),
+      height: withSpring(scaleImage.value)
     }
   })
 
