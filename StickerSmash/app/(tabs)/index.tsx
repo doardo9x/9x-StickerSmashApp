@@ -125,7 +125,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: 'black',
     alignItems: "center",
   },
   imageContainer: {
@@ -137,10 +137,11 @@ const styles = StyleSheet.create({
   },
   optionsContainer: {
     position: 'absolute',
-    bottom: 80,
+    bottom: 90,
   },
   optionsRow: {
     alignItems: 'center',
     flexDirection: 'row',
+    gap: 40,
   }
 })
